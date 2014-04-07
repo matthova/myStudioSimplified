@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  size: 1
+  description: MyString
+  hourly_rate: 1
+
+two:
+  name: MyString
+  size: 1
+  description: MyString
+  hourly_rate: 1
