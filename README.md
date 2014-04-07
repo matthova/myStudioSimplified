@@ -2,27 +2,53 @@
 A studio management system built on Rails
 ##Object Models
 
-Company
+User
+- has_secure_password
+- username:string
+- email:string
+- fname:string
+- lname:string
+- phone:string
+- description:string
+- studio_admin:boolean
+- studio_owner:boolean
+- hourly_rate:integer
+- password_digest:string
+- has_many :gears
+- belongs_to_many :bands
+
+Event
+- name:string
+- dateTime:string
+- duration:integer
+- description:string
+- created_by:integer
+- cost:integer
+- has_many :bands
+- has_many :users
+- belongs_to :space
+- belongs_to :project
+
+Band
 - name:string
 - description:string
-- year_est:integer
-- has_many :studios
-- has_many :users (company admins)
+- has_many :users
+- has_many :payments
+- has_and_belongs_to_many :projects
 
 Studio
 - name:string
 - description:string
-- year_est:integer
 - has_many :spaces
 - has_many :users (studio admins)
-- belongs_to :company
 
 Space
 - name:string
 - size:integer
 - description:string
+- hourly_rate:integer
 - has_many :users (space admins)
-- has_and_belongs_to_many :events
+- has_many :events
 - has_many :gears
 - belongs_to :studio
 
@@ -32,35 +58,20 @@ Gear
 - belongs_to :space
 - belongs_to :user
 
-Event
-- name:string
-- dateTime:string
-- description:string
-- has_many :users
-- has_one :space
-- belongs_to :project
-
-User
-- username:string
-- fname:string
-- lname:string
-- email:string
-- description:string
-- company_admin:integer
-- studio_admin:integer
-- space_admin:integer
-- has_and_belongs_to_many :events
-- has_many :payments
-- has_many :gears
-
 Project
 - name:string
 - description:string
-- cost:integer
+- balance:integer
 - has_many :payments
 - has_many :events
+- has_and_belongs_to_many :artists
 
 Payment
 - amount:integer
+- description:string
 - has_one :project
 - has_one :user
+
+
+redo space
+add hourly rate to user
