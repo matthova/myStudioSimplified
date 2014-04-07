@@ -23,7 +23,6 @@ Event
 - duration:integer
 - description:string
 - created_by:integer
-- cost:integer
 - has_many :bands
 - has_many :users
 - belongs_to :space
