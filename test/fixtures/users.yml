@@ -2,24 +2,8 @@
 
 one:
   username: MyString
-  email: MyString
-  fname: MyString
-  lname: MyString
-  phone: MyString
-  description: MyString
-  studio_admin: false
-  studio_owner: false
-  hourly_rate: 1
   password_digest: MyString
 
 two:
   username: MyString
-  email: MyString
-  fname: MyString
-  lname: MyString
-  phone: MyString
-  description: MyString
-  studio_admin: false
-  studio_owner: false
-  hourly_rate: 1
   password_digest: MyString

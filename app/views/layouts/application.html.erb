@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>MyStudioSimplified</title>
+  <title>BasicUser</title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-
+<% if current_user %>
+  Hi, <%= link_to(current_user.username, user_path(current_user.username)) %>!
+<% end %>
 <%= yield %>
 
 </body>

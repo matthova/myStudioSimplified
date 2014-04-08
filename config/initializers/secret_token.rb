@@ -4,4 +4,4 @@
 # If you change this key, all old signed cookies will become invalid!
 # Make sure the secret is at least 30 characters and all random,
 # no regular words or you'll be exposed to dictionary attacks.
-MyStudioSimplified::Application.config.secret_token = '9a5ca9abaf74e3db6174261ab7cff4796b38e4659d24f143dd05b688331d9097aeb31e36e946402f004258d997a0557955ec1505223fb343c750cb201d97f1eb'
+BasicUser::Application.config.secret_token = '7d494f1e0f92bc8155b0e00105e5dc7b89b2cef63bec3af4bdf726d7ca3ba26a8e8bc9b3ca8eda190cacd46cd299f84ee8b177ab0ac09ca44b0aedb0b1f1a394'

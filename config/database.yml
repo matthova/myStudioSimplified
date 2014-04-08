@@ -15,7 +15,7 @@
 development:
   adapter: postgresql
   encoding: unicode
-  database: myStudioSimplified_development
+  database: basic_user_development
   host: localhost
   port: <%= ENV["BOXEN_POSTGRESQL_PORT"] || 5432 %>
 
@@ -40,13 +40,13 @@ development:
 test:
   adapter: postgresql
   encoding: unicode
-  database: myStudioSimplified_test
+  database: basic_user_test
   host: localhost
   port: <%= ENV["BOXEN_POSTGRESQL_PORT"] || 5432 %>
 
 production:
   adapter: postgresql
   encoding: unicode
-  database: myStudioSimplified_production
+  database: basic_user_production
   host: localhost
   port: <%= ENV["BOXEN_POSTGRESQL_PORT"] || 5432 %>

@@ -4,4 +4,4 @@
 
 require File.expand_path('../config/application', __FILE__)
 
-MyStudioSimplified::Application.load_tasks
+BasicUser::Application.load_tasks
