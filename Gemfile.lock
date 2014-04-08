@@ -31,6 +31,9 @@ GEM
     arel (3.0.3)
     bcrypt-ruby (3.0.1)
     builder (3.0.4)
+    dotenv (0.10.0)
+    dotenv-rails (0.10.0)
+      dotenv (= 0.10.0)
     erubis (2.7.0)
     execjs (2.0.2)
     friendly_id (4.0.10.1)
@@ -100,6 +103,7 @@ PLATFORMS
 
 DEPENDENCIES
   bcrypt-ruby (~> 3.0.0)
+  dotenv-rails
   friendly_id (~> 4.0.10)
   jquery-rails
   pg

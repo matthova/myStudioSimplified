@@ -37,3 +37,5 @@ gem 'unicorn'
 
 # To use debugger
 # gem 'debugger'
+
+gem 'dotenv-rails', :groups => [:development, :test]
