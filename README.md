@@ -14,7 +14,7 @@ User
 - studio_owner:boolean
 - hourly_rate:integer
 - password_digest:string
-- has_many :gears
+- has_many :gears through space
 - belongs_to_many :bands
 
 Event
@@ -48,7 +48,6 @@ Space
 - hourly_rate:integer
 - has_many :users (space admins)
 - has_many :events
-- has_many :gears
 - belongs_to :studio
 
 Gear
@@ -70,7 +69,3 @@ Payment
 - description:string
 - has_one :project
 - has_one :user
-
-
-redo space
-add hourly rate to user

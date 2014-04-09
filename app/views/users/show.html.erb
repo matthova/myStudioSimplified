@@ -1,1 +1,36 @@
-<h1><%= @user.username %></h1>
+<h1>
+<% if @user.fname && @user.lname %>
+  <%= "#{@user.fname} #{@user.lname}" %>
+<% elsif @user.fname %>
+  <%= @user.fname %>
+<% elsif @user.lname %>
+  <%= @user.lname %>
+<% else %>
+  User has no name on record
+<% end %>
+</h1>
+
+<% if @user.email %>
+  <p>Email: <%= @user.email %>
+<% else %>
+  <p>User has no email on record</p>
+<% end %>
+
+
+<% if @user.phone %>
+  <p>Phone #: <%= @user.phone %>
+<% else %>
+  <p>User has no phone number on record</p>
+<% end %>
+
+<% if @user.description %>
+  <p>Description: <%= @user.description %>
+<% else %>
+  <p>User has no description on record</p>
+<% end %>
+
+<% if @user.hourly_rate %>
+  <p>Hourly Rate:<%= @user.hourly_rate %>
+<% else %>
+  <p>User has no "hourly rate" on record</p>
+<% end %>

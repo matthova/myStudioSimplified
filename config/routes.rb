@@ -13,6 +13,14 @@ BasicUser::Application.routes.draw do
   # 
   # get "users/destroy"
 
+  resources :bands
+  resources :events
+  resources :gears
+  resources :payments
+  resources :projects
+  resources :spaces
+  resources :studios
   resources :users
-  root :to => 'users#index'
+  
+  root :to => 'events#index'
 end
