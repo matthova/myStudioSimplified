@@ -1,0 +1,61 @@
+// Place all the behaviors and hooks related to the matching controller here.
+// All this logic will automatically be available in application.js.
+$(document).ready(function(){
+  $('.datepicker').datepicker({
+    numberOfMonths: 3,
+    showButtonPanel: true
+  });
+    
+  $('#calendar').fullCalendar({
+
+    eventSources: [
+      <% @events = Event.all %>
+      <% if @events %>
+
+        // your event source
+        {
+            events: [ // put the array in the `events` property
+              <% @events.each do |event| %>
+              {
+                  title  : '<%= event.name %>',
+                  start  : '<%= event.dateTime %>'
+              },
+              <% end %>
+              {
+                  title : 'uh uh',
+                  start : '2014-04-12'
+              }
+            ],
+            color: 'black',     // an option!
+            textColor: 'yellow' // an option!
+        },
+        {
+          events: [ // put the array in the `events` property
+            {
+                title : 'uh uh',
+                start : '2014-04-14'
+            }
+          ],
+          color: 'green',     // an option!
+          textColor: 'yellow' // an option!
+        }
+      <% else %>
+      {
+          events: [ // put the array in the `events` property
+            {
+                title : 'nope',
+                start : '2014-04-12'
+            }
+          ],
+          color: 'black',     // an option!
+          textColor: 'yellow' // an option!
+      }
+        
+      <% end %>
+
+        // any other event sources...
+
+    ]
+  })
+    
+});

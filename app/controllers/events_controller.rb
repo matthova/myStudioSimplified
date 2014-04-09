@@ -38,4 +38,5 @@ class EventsController < ApplicationController
     
     redirect_to(:root)
   end
+  
 end
