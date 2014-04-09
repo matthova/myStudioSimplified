@@ -2,4 +2,5 @@
   <% if @event.name %>
     <%= @event.name %>
   <% end %>
+  <%= link_to("#{@event.name}", edit_event_path) %>
 </h1>
