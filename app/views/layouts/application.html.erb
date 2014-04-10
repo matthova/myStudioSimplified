@@ -11,13 +11,27 @@
   
 </head>
 <body>
-  
+  <p>
   <% if current_user %>
   Hi, <%= link_to(current_user.email, user_path(current_user.id)) %>!   <%= link_to "Sign out", "/logins/#{current_user.id}", :method => :delete %>
   <% end %>
-  <%= yield %>
-  <%= link_to("Book Session", new_event_path)%>
-  <%= link_to("Home", root_path)%>
-
+  </p>
+  <div class="colmask threecol">
+    <div class="colmid">
+      <div class="colleft">
+			  <div class="col1"><%= yield %></div>
+  			<div class="col2">
+          <%= link_to("Book Session", new_event_path)%>
+          <br />
+          <br />
+          <%= link_to("Home", root_path)%>
+  			</div>
+        <div class="col3">
+          <p>other stuff over here</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="footer"></div>
 </body>
 </html>
