@@ -29,8 +29,12 @@
   <p>User has no description on record</p>
 <% end %>
 
-<% if @user.hourly_rate %>
-  <p>Hourly Rate:<%= @user.hourly_rate %>
-<% else %>
+<% if @user.engineer? %>
+  <% if @user.hourly_rate %>
+    <p>Hourly Rate:<%= @user.hourly_rate %>
+  <% else %>
   <p>User has no "hourly rate" on record</p>
+  <% end %>
 <% end %>
+
+<%= link_to("Edit #{@user.name}:", edit_user_path) %>

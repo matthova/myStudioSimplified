@@ -12,11 +12,7 @@ class UsersController < ApplicationController
   end
 
   def edit
-    if current_user.username == params[:id]
-      @user = User.find(params[:id])
-    else
-      redirect_to(:root)
-    end
+    @user = User.find(params[:id])
   end
 
   def create

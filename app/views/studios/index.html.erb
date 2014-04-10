@@ -1,0 +1,5 @@
+<% @studios.each do |studio| %>
+  <p>
+    <%= link_to(studio.name, studio_path(studio.id)) %> 
+  </p>
+<% end %>

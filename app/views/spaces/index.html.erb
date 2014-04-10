@@ -1,0 +1,5 @@
+<% @spaces.each do |space| %>
+  <p>
+    <%= link_to(space.name, space_path(space.id)) %> 
+  </p>
+<% end %>

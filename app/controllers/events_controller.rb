@@ -1,27 +1,33 @@
 class EventsController < ApplicationController
   def index
-    @events = Event.select([:title, :start])
-    # Alias SQL selected columns with any name using the 'AS' modifier.
-    # @events_for_calendar = []
-    # @events.each do |event|
-    #   @events_for_calendar << [["title" => event.title],["start" => event.start]]
-    # end
+    
+    @events = Event.joins(:band).select(['events.id AS url', "bands.name AS title", :start])
+    @events.each do |event|
+      event.url = "events/" << event.url
+    end
   end
 
   def show
     @event = Event.find(params[:id])
+    binding.pry
   end
 
   def new
     @event = Event.new
+    @spaces = Space.all
+    @engineers = User.where(engineer: true)
   end
 
   def edit
     @event = Event.find(params[:id])
+    @spaces = Space.all
+    @engineers = User.where(engineer: true)
   end
 
   def create
+    
     @event = Event.new(params[:event])
+    @event.band_name_to_id
     
     if @event.save      
       redirect_to(:root)

@@ -5,24 +5,25 @@
     <% end %>
   <% end %>
 
-  <%= f.label :title %>
-  <%= f.text_field :title %>
-  
-  <%= f.label "Start Date" %>
+  <%= f.label "Band" %>
+  <%= f.text_field :band_name %>
+  <br/>
+  <br/>
+  <% @spaces.each do |space| %>
+    <%= f.radio_button :space_id, space.id, checked:false %><%= space.name %>
+  <% end %>
+  <br/>
+  <br/>
+  <%= f.label "Session Engineer"%>
+  <% @engineers.each do |engineer| %>
+    <%= f.radio_button :engineer_id, engineer.id, checked:false %><%= engineer.name %>
+  <% end %>
+  <br/>
+  <br/>
+  <%= f.label "Date" %>
   <%= f.text_field :start, class: "datepicker" %>
-  
-  <%= f.label "End Date" %>
-  <%= f.text_field :end, class: "datepicker"%>
-  
-  <!-- <%= f.label "Start Time"%>
-  <%= f.text_field :start, class: "timepicker" %>
-  
-  <%= f.label "End Time" %>
-  <%= f.text_field :end, class: "timepicker"%> -->
-  
-  <%= f.label :description %>
-  <%= f.text_field :description %>
-    
+  <br/>
+  <br/>
   <%= f.submit %>
+  
 <% end %>
-
