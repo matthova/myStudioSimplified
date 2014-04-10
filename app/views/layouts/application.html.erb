@@ -1,19 +1,25 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>BasicUser</title>
+  <title>My Studio Simplified</title>
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.22/themes/redmond/jquery-ui.css" />    
   <%= stylesheet_link_tag   "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
+  <script type="text/javascript">
+  window.events = $.parseJSON('<%= raw @events.to_json %>');
+  </script>
+  
 </head>
 <body>
   
-<% if current_user %>
+  <% if current_user %>
   Hi, <%= link_to(current_user.email, user_path(current_user.id)) %>!
-<% end %>
-<%= yield %>
-<%= link_to("Book Session", new_event_path)%>
-<%= link_to("Home", root_path)%>
+  <% end %>
+  <%= yield %>
+  <%= link_to("Book Session", new_event_path)%>
+  <%= link_to("Home", root_path)%>
 
 </body>
 </html>

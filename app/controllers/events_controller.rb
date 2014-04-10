@@ -1,6 +1,11 @@
 class EventsController < ApplicationController
   def index
-    @events = Event.all
+    @events = Event.select([:title, :start])
+    # Alias SQL selected columns with any name using the 'AS' modifier.
+    # @events_for_calendar = []
+    # @events.each do |event|
+    #   @events_for_calendar << [["title" => event.title],["start" => event.start]]
+    # end
   end
 
   def show
