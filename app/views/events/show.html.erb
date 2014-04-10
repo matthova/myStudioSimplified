@@ -1,6 +1,3 @@
-<h1>
-  <% if @event.title %>
-    <%= @event.title %>
-    <%= link_to("#{@event.title}", edit_event_path) %>
-  <% end %>
-</h1>
+<h1>Event</h1>
+
+<%= link_to("Edit #{@band.name}'s session", edit_event_path) %>

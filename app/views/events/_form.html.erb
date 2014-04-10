@@ -6,17 +6,17 @@
   <% end %>
 
   <%= f.label "Band" %>
-  <%= f.text_field :band_name %>
+  <%= f.text_field :band_name, value: @band.name %>
   <br/>
   <br/>
   <% @spaces.each do |space| %>
-    <%= f.radio_button :space_id, space.id, checked:false %><%= space.name %>
+    <%= f.radio_button :space_id, space.id, checked: space.id == @event.space_id  %><%= space.name %>
   <% end %>
   <br/>
   <br/>
   <%= f.label "Session Engineer"%>
   <% @engineers.each do |engineer| %>
-    <%= f.radio_button :engineer_id, engineer.id, checked:false %><%= engineer.name %>
+    <%= f.radio_button :engineer_id, engineer.id, checked: engineer.id == @event.engineer_id %><%= engineer.name %>
   <% end %>
   <br/>
   <br/>

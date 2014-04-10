@@ -9,7 +9,8 @@ class EventsController < ApplicationController
 
   def show
     @event = Event.find(params[:id])
-    binding.pry
+    @engineer = User.find(@event.engineer_id)
+    @band = Band.find(@event.band_id)
   end
 
   def new
@@ -20,8 +21,9 @@ class EventsController < ApplicationController
 
   def edit
     @event = Event.find(params[:id])
+    @engineers = User.find_all_by_id(@event.engineer_id)
+    @band = Band.find(@event.band_id)
     @spaces = Space.all
-    @engineers = User.where(engineer: true)
   end
 
   def create

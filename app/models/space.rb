@@ -3,4 +3,5 @@ class Space < ActiveRecord::Base
 
   belongs_to :studio
   has_many :events
+  
 end

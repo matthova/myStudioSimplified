@@ -7,6 +7,7 @@ BasicUser::Application.routes.draw do
   resources :spaces
   resources :studios
   resources :users
+  resources :logins
   
   root :to => 'events#index'
 end
