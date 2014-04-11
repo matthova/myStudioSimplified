@@ -35,6 +35,9 @@ body {
   background-color:#282828;
   background-size:16px 16px;
 }
+
+
+
 a {
 	color:#369;
 }
@@ -123,6 +126,35 @@ img {
 	padding:6px 15px !important;
 	text-align:right;
 }
+
+.home_link{
+  float:left;
+  position:relative;
+  top:-10px;
+}
+
+.session{
+  float:right;
+}
+
+.header{
+  padding:5px;
+  background: #555555;
+  height:60px;
+  font-family:helvetica;
+  color:#dddddd;
+  font-size:15px;
+}
+
+.header a{
+  padding:5px;
+  background: #555555;
+  height:60px;
+  font-family:helvetica;
+  color:#dddddd;
+  font-size:15px;
+}
+
 /* column container */
 .colmask {
 	position:relative;	/* This fixes the IE7 overflow hidden bug */
@@ -130,6 +162,7 @@ img {
 	float:left;
 	width:100%;			/* width of whole page */
 	overflow:hidden;		/* This chops off any overhanging divs */
+  padding:15px;
 }
 /* common column settings */
 .colright,
@@ -153,7 +186,7 @@ img {
 /*  background:#eee;    /* right column background colour */
 }
 .threecol .colmid {
-	right:25%;			/* width of the right column */
+	right:35%;			/* width of the right column */
 }
 .threecol .colleft {
 	right:50%;			/* width of the middle column */
@@ -163,12 +196,13 @@ img {
 	left:102%;			/* 100% plus left padding of center column */
 }
 .threecol .col2 {
-	width:21%;			/* Width of left column content (column width minus padding on either side) */
-	left:31%;			/* width of (right column) plus (center column left and right padding) plus (left column left padding) */
+	width:33%;			/* Width of left column content (column width minus padding on either side) */
+	left:37%;			/* width of (right column) plus (center column left and right padding) plus (left column left padding) */
 }
 .threecol .col3 {
-	width:21%;			/* Width of right column content (column width minus padding on either side) */
-	left:85%;			/* Please make note of the brackets here:
+	width:33%;			/* Width of right column content (column width minus padding on either side) */
+	left:103%;
+  top:-180px;			/* Please make note of the brackets here:
 					(100% - left column width) plus (center column left and right padding) plus (left column left and right padding) plus (right column left padding) */
 }
 /* Footer styles */
@@ -177,24 +211,30 @@ img {
 	float:left;
 	width:100%;
 	border-top:1px solid #000;
-  background: #dddddd;
-  height: 100px;
+  background: #555555;
+  color:#dddddd;
+  height: 60px;
   width: 100%;
   position: absolute;
   bottom: 0;
+  font-family: helvetica;
+  font-size: 20px;  
 }
-#footer p {
-	padding:10px;
-	margin:0;
-  font-size: 0.83em;
-  text-align: center;
-  padding-top: 2em;
+
+#footer a{
+  color:#dddddd;
+}
+
+#footer_text {
+  text-align:center;
 }
 
 .col2{
   color:#dddddd;
   font-family: helvetica;
   font-size:22px;
+  margin: 10px;
+  border-radius: 10px;
 }
 
 .col2 a{
@@ -205,7 +245,7 @@ img {
   background:#dddddd;
   border-radius: 10px;
   border: solid 3px #eeeeee;
-  padding:8px;
+  padding:4px 8px;
   top:10px;
 }
 

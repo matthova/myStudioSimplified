@@ -1,0 +1,6 @@
+alert("here");
+<% @events = Event.all %>
+$('#calendar').fullCalendar({
+  events: $.parseJSON('<%= raw @events.to_json %>');
+});
+alert("here");

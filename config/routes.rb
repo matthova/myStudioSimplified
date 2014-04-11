@@ -9,5 +9,6 @@ BasicUser::Application.routes.draw do
   resources :users
   resources :logins
   
+  get '/admin', to: 'logins#new'
   root :to => 'events#index'
 end

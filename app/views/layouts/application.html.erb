@@ -11,30 +11,42 @@
   
 </head>
 <body>
-  <p>
-  <% if current_user %>
-  Hi, <%= link_to(current_user.email, user_path(current_user.id)) %>!   <%= link_to "Sign out", "/logins/#{current_user.id}", :method => :delete %>
-  <% end %>
-  </p>
+  <div class="header">
+    <a href = "/" >
+    <div class="home_link">
+      <h1>My Studio Simplified</h1>
+    </div>
+    </a>
+    
+    <div class="session">
+      <p>
+        <% if current_user %>
+          Hi, <%= link_to(current_user.email, user_path(current_user.id)) %>!             <%= link_to "Sign out", "/logins/#{current_user.id}", :method =>   :delete %>
+        <% end %>
+      </p>
+    </div>
+  </div>
   <div class="colmask threecol">
     <div class="colmid">
       <div class="colleft">
 			  <div class="col1"><%= yield %></div>
   			<div class="col2">
-          <%= link_to("Book Session", new_event_path)%>
+          <% if current_user%>
+          <%= link_to "Book Session", new_event_path, :remote => true %>
           <br />
           <br />
           <%= link_to("Contacts", users_path)%>
           <br />
           <br />
           <%= link_to("Manage Gear", gears_path)%>
+          <% end %>
   			</div>
         <div class="col3">
-          <p>other stuff over here</p>
+          <p></p>
         </div>
       </div>
     </div>
   </div>
-  <div id="footer"><br/><center><a href="/">My Studio Simplified™</a> by <a href=http://www.matthova.com>Matt Hova</a></center></div>
+  <div id="footer"><br/><div id="footer_text">My Studio Simplified™ by <a href="http://www.matthova">Matt Hova</a></div></div>
 </body>
 </html>

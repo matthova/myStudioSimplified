@@ -3,7 +3,7 @@ class EventsController < ApplicationController
     
     @events = Event.joins(:band).select(['events.id AS url', "bands.name AS title", :start])
     @events.each do |event|
-      event.url = "events/" << event.url
+      event.url = "events/" << event.url << "/edit"
     end
   end
 
@@ -11,6 +11,7 @@ class EventsController < ApplicationController
     @event = Event.find(params[:id])
     @engineer = User.find(@event.engineer_id)
     @band = Band.find(@event.band_id)
+    @space = Space.find(@event.space_id)
   end
 
   def new
@@ -21,9 +22,12 @@ class EventsController < ApplicationController
 
   def edit
     @event = Event.find(params[:id])
-    @engineers = User.find_all_by_id(@event.engineer_id)
+    @engineers = User.where(engineer: true)
     @band = Band.find(@event.band_id)
     @spaces = Space.all
+    if !current_user
+      redirect_to("/events/#{@event.id}")
+    end
   end
 
   def create
@@ -31,11 +35,18 @@ class EventsController < ApplicationController
     @event = Event.new(params[:event])
     @event.band_name_to_id
     
-    if @event.save      
-      redirect_to(:root)
-    else
-      render "new"
+    respond_to do |format|
+      if @event.save      
+        @event = Event.where(:id => @event.id).joins(:band).select(['events.id AS url', "bands.name AS title", :start]).first
+        @event.url = "events/" << @event.url
+        format.html { redirect_to :root }
+        format.js # create.js.erb
+      else
+        format.html { render "new" }
+        format.js
+      end
     end
+    
   end
 
   def update

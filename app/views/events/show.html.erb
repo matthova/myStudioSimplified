@@ -1,3 +1,7 @@
-<h1>Event</h1>
+<h1><%= @event.start %> at <%= @space.name %></h1>
+<h2>Band: <%= @band.name%></h2>
+<p>Session Engineer: <%= @engineer.name %></p>
 
-<%= link_to("Edit #{@band.name}'s session", edit_event_path) %>
+<% if current_user %>
+  <%= link_to("Edit #{@band.name}'s session", edit_event_path) %>
+<% end %>

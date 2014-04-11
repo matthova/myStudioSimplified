@@ -8,4 +8,9 @@ class ApplicationController < ActionController::Base
   end
   helper_method :current_user
 
+  def authenticate
+    if !current_user
+      redirect_to :root
+    end
+  end
 end
