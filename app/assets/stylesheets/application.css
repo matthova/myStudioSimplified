@@ -196,7 +196,7 @@ img {
 	left:102%;			/* 100% plus left padding of center column */
 }
 .threecol .col2 {
-	width:33%;			/* Width of left column content (column width minus padding on either side) */
+	width:15%;			/* Width of left column content (column width minus padding on either side) */
 	left:37%;			/* width of (right column) plus (center column left and right padding) plus (left column left padding) */
 }
 .threecol .col3 {
