@@ -1,12 +1,15 @@
-<%= form_for @event do |f| %>
+<%= form_for @event, :remote => true do |f| %>
   <% if @event.errors.any? %>
     <% @event.errors.full_messages.each do |error_msg| %>
       <p><%= error_msg %></p>
     <% end %>
   <% end %>
-
   <%= f.label "Band" %>
-  <%= f.text_field :band_name, value: @band.name %>
+  <% if @band %>
+    <%= f.text_field :band_name, value: @band.name %>
+  <% else %>
+    <%= f.text_field :band_name %>
+  <% end%>
   <br/>
   <br/>
   <% @spaces.each do |space| %>

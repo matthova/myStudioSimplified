@@ -1,3 +1,4 @@
 <h1>Edit Event Info</h1>
 
 <%= render :partial => "form" %>
+<%= link_to "Delete Event", "/events/#{@event.id}", :method => :delete %>

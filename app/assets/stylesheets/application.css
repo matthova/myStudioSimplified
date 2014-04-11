@@ -24,10 +24,16 @@ body {
 	padding:0;
 	border:0;			/* This removes the border around the viewport in old versions of IE */
 	width:100%;
-	background:#fff;
 	min-width:600px;		/* Minimum width of layout - remove line if not required */
 					/* The min-width property does not work in old versions of Internet Explorer */
 	font-size:90%;
+  background:
+  radial-gradient(black 15%, transparent 16%) 0 0,
+  radial-gradient(black 15%, transparent 16%) 8px 8px,
+  radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 0 1px,
+  radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 8px 9px;
+  background-color:#282828;
+  background-size:16px 16px;
 }
 a {
 	color:#369;
@@ -144,15 +150,13 @@ img {
 }
 /* 3 Column settings */
 .threecol {
-	background:#eee;		/* right column background colour */
+/*  background:#eee;    /* right column background colour */
 }
 .threecol .colmid {
 	right:25%;			/* width of the right column */
-	background:#fff;		/* center column background colour */
 }
 .threecol .colleft {
 	right:50%;			/* width of the middle column */
-	background:#f4f4f4;	/* left column background colour */
 }
 .threecol .col1 {
 	width:46%;			/* width of center column content (column width minus padding on either side) */
@@ -173,8 +177,46 @@ img {
 	float:left;
 	width:100%;
 	border-top:1px solid #000;
+  background: #dddddd;
+  height: 100px;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
 }
 #footer p {
 	padding:10px;
 	margin:0;
+  font-size: 0.83em;
+  text-align: center;
+  padding-top: 2em;
+}
+
+.col2{
+  color:#dddddd;
+  font-family: helvetica;
+  font-size:22px;
+}
+
+.col2 a{
+  position:relative;
+  color:#333333;
+  font-family: helvetica;
+  font-size:22px;
+  background:#dddddd;
+  border-radius: 10px;
+  border: solid 3px #eeeeee;
+  padding:8px;
+  top:10px;
+}
+
+.col3{
+  color:#dddddd;
+  font-family: helvetica;
+  font-size:22px;
+}
+
+.col1{
+  background: #dddddd;
+  padding:10px;
+  border-radius:10px;
 }
