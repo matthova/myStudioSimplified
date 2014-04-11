@@ -15,6 +15,7 @@ class EventsController < ApplicationController
   end
 
   def new
+    authenticate
     @event = Event.new
     @spaces = Space.all
     @engineers = User.where(engineer: true)
@@ -31,7 +32,7 @@ class EventsController < ApplicationController
   end
 
   def create
-    
+    authenticate
     @event = Event.new(params[:event])
     @event.band_name_to_id
     
@@ -50,6 +51,7 @@ class EventsController < ApplicationController
   end
 
   def update
+    authenticate
     @event = Event.find(params[:id])
     @event.update_attributes(params[:event])
     
@@ -57,6 +59,7 @@ class EventsController < ApplicationController
   end
 
   def destroy
+    authenticate
     @event = Event.find(params[:id])
     @event.delete
     

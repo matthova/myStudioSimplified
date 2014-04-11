@@ -201,8 +201,7 @@ img {
 }
 .threecol .col3 {
 	width:33%;			/* Width of right column content (column width minus padding on either side) */
-	left:103%;
-  top:-180px;			/* Please make note of the brackets here:
+	left:87%;
 					(100% - left column width) plus (center column left and right padding) plus (left column left and right padding) plus (right column left padding) */
 }
 /* Footer styles */
