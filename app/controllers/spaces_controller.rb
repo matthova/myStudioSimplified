@@ -9,7 +9,7 @@ class SpacesController < ApplicationController
 
   def new
     @space = Space.new
-    @studios = Studio.All
+    @studios = Studio.all
   end
 
   def edit
