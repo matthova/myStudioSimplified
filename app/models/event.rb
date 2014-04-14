@@ -4,13 +4,40 @@ class Event < ActiveRecord::Base
   
   attr_accessor :band_name
   
-  def band_name_to_id
-    band = Band.find_or_create_by_name(self.band_name)
-    self.band_id = band.id
-    
-  end
-  
   # validates :end, :numericality => { :greater_than_or_equal_to => 1 }
   belongs_to :space
   belongs_to :band
+  
+  # Public: Return a Band's ID or create a new one
+  #
+  # text  - The String to be duplicated.
+  # count - The Integer number of times to duplicate the text.
+  #
+  # Examples
+  #
+  #   band_name_to_id 
+  #   # => 5
+  #
+  # Returns the duplicated String.
+  def band_name_to_id
+    band = Band.find_or_create_by_name(self.band_name)
+    self.band_id = band.id  
+  end
+  
+  # Public: Queries the DB for all events
+  #
+  # Sets the global variable @events to hold every event with a url, title
+  # url will reference "edit event" if current user is admin else "show event"
+  def list_events
+    @events = Event.joins(:band).select(['events.id AS url', "bands.name AS title", :start])
+    @events.each do |event|
+      if current_user
+        event.url = "events/" << event.url << "/edit"
+      else
+        event.url = "events/" << event.url
+      end
+    end
+  end
+
 end
+

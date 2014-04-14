@@ -1,10 +1,6 @@
 class EventsController < ApplicationController
   def index
     
-    @events = Event.joins(:band).select(['events.id AS url', "bands.name AS title", :start])
-    @events.each do |event|
-      event.url = "events/" << event.url << "/edit"
-    end
   end
 
   def show
