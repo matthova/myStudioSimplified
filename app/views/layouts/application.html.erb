@@ -5,6 +5,8 @@
   <%= stylesheet_link_tag   "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
+  <link href='http://fonts.googleapis.com/css?family=Puritan' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Lobster+Two' rel='stylesheet' type='text/css'>
   <script type="text/javascript">
   window.events = $.parseJSON('<%= raw @events.to_json %>');
   </script>
@@ -14,7 +16,10 @@
   <div class="header">
     <a href = "/" >
       <div class="home_link">
-        <h1>My Studio Simplified</h1>
+        <h1>
+          <span class = "my_studio" >My Studio</span>
+          <span class = "simplified" >Simplified  </span>
+        </h1>
       </div>
     </a>
     
@@ -46,6 +51,6 @@
       </div>
     </div>
   </div>
-  <div id="footer"><br/><div id="footer_text">My Studio Simplified™ by <a href="http://www.matthova">Matt Hova</a></div></div>
+  <div id="footer"><br/><div id="footer_text">My Studio Simplified™ by <a href="http://www.matthova.com">Matt Hova</a></div></div>
 </body>
 </html>

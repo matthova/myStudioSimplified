@@ -13,23 +13,31 @@
  *= require fullcalendar
  *= require_tree .
  */
-
-.grid {          
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" version="1.1"><rect style="fill:#ff6600;fill-opacity:1;" width="36" height="1" x="0" y="17" /><rect style="fill:#ff6600;fill-opacity:0.3;" width="36" height="1" x="0" y="2" /><rect style="fill:#ff6600;fill-opacity:1;" width="36" height="1" x="0" y="35" /><rect style="fill:#ff6600;fill-opacity:0.3;" width="36" height="1" x="0" y="20" /><rect style="fill:#ff6600;fill-opacity:1;stroke:none" width="1" height="36" x="0" y="0" /><rect style="fill:#ff6600;fill-opacity:1;stroke:none" width="1" height="36" x="18" y="0" /></svg>');
+body{
+  background:#000;
 }
 
-.inner {
-  width: 72rem; /* 1080px */
-  margin: 0 auto;
+.my_studio{
+  font-family: helvetica  ;
+  font-size:30px;
 }
 
-.span2 {
-  display: block;
-  width: 34.8rem; 
-  margin: 0 1.2rem 0 0;
-  float: left;
+.simplified {
+  font-family: 'Lobster Two', cursive;
+  font-size:38px;
 }
 
-.clearfix {
-  clear: both;
+.home_link a:visited{
+  color:0#fff;
+  text-decoration: none;
+}
+
+a:-webkit-any-link{
+  text-decoration:none !important;
+  color:#fff;
+}
+
+a{
+  text-decoration:none;
+  color:#fff;
 }

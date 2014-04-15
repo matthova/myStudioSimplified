@@ -1,0 +1,23 @@
+@font-face {
+    font-family: 'i_did_thisregular';
+    src: url('i_did_this-webfont.eot');
+    src: url('i_did_this-webfont.eot?#iefix') format('embedded-opentype'),
+         url('i_did_this-webfont.woff') format('woff'),
+         url('i_did_this-webfont.ttf') format('truetype'),
+         url('i_did_this-webfont.svg#i_did_thisregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'helveticaneueblackcond';
+    src: url('helvetica-neue-black-cond-1361522165-webfont.eot');
+    src: url('helvetica-neue-black-cond-1361522165-webfont.eot?#iefix') format('embedded-opentype'),
+         url('helvetica-neue-black-cond-1361522165-webfont.woff') format('woff'),
+         url('helvetica-neue-black-cond-1361522165-webfont.ttf') format('truetype'),
+         url('helvetica-neue-black-cond-1361522165-webfont.svg#helveticaneueblackcond') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
