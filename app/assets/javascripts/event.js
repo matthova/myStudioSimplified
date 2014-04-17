@@ -3,10 +3,12 @@
 $(document).ready(function(){
 
   $('.datepicker').datepicker({
-    numberOfMonths: 3,
+    numberOfMonths: 1,
     showButtonPanel: true
   });
-  
+  console.log(window.events[0]);
+  // window.events[0].append["textColor:'#ff0000'"]
+  // console.log(window.events[0]);
   $('#calendar').fullCalendar({
     events: window.events
   });

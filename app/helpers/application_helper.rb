@@ -14,4 +14,10 @@ module ApplicationHelper
     end
   end
 
+  def logout_partial(current_user)
+    if current_user
+      render :partial => "shared/logout", locals: { current_user: current_user }
+    end
+  end
+
 end

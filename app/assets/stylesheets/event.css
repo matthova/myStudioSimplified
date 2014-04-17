@@ -1,7 +1,27 @@
 #calendar{
-  background:#e8eedd;
+  background:#aaa;
   padding: 10px;
-  border: solid 3px #444444;
   position:relative;
   top:-1em;
+}
+
+.fc-event{
+    color:#eeeeee;
+  border-radius:0px !important;
+}
+
+.fc-day, .fc-day-header{
+  border: solid #000;  
+}
+
+.fc-state-highlight{
+  background:#f0f0f0;
+}
+
+.fc-day-content{
+  padding:0 !important;
+}
+
+.fc-day-number, .fc-day-header{
+  color:#000;
 }

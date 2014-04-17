@@ -1,24 +1,28 @@
 a:-webkit-any-link{
   text-decoration:none !important;
-  color:#000;
 }
 
 
 a{
   text-decoration:none;
-  color:#fff;
+  color:#bbb;
 }
 
 
 html,body{
-  background:#eeeeee;
+  background:#333;
   font-family:helvetica;
+  color:#e0e0e0;
+}
+
+h1,h2,h3{
+  color:#333;
 }
 
 #container {
   min-height: 100%;
   width: 100%;
-  background:#eeeeee;
+  background:#333;
   position: relative;
   padding: 0;
 }
@@ -33,23 +37,30 @@ html,body{
   background-image: url("https://s3-us-west-2.amazonaws.com/matthova/studio-simplified.png");
   background-size:cover;
   display: inline-block;
-  height: 4em;
-  width: 10em;
+  height: 3em;
+  width: 8em;
   overflow: hidden;
+  padding: 10px;
 }
 
 .button{
   width:100%;
-  border: solid 4px #000;
-  background:#dddddd;
+  border-bottom: solid 1px #333;
+  background:#324F6D;
+  transition-property:background;
+  transition-duration:500ms;
+  font-size: .75em;
+  height:5vh;
 }
 
-.session{
-  float:right;
-  position: relative;
-  top: 1.5em;
-  right:.4em;
+.button:hover{
+  background:#C27F54;
 }
+
+.button a{
+  color:#bbb;
+}
+
 /* =Reset
 -------------------------------------------------------------- */
 
@@ -71,14 +82,15 @@ div{
 -------------------------------------------------------------- */
  
 #header{
-    background: #ddd;
+    background: #333;
     height: 4em;
     padding: 0;
     margin: 0;
+    z-index:4;
 }
  
 #main{
-    background: #eeeeee;   
+    background: #333  ;   
 }
  
 #secondary .widget,
@@ -88,7 +100,12 @@ div{
   text-align:center;
   width:100%;
 }
- 
+
+#primary,#secondary,#tertiary{
+  height:100vh;
+  background:#333;
+}
+
 /* =Structure Mobile
 -------------------------------------------------------------- */
 
@@ -97,7 +114,7 @@ div{
 }
 
 .footer {
-  background:#f00;;
+  background:#333;
   height: 2em;
   position: absolute;
   bottom: 0;

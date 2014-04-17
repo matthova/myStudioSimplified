@@ -3,16 +3,17 @@
 
 @media screen and (min-width : 900px) {
     #primary{
-        float: left;
+        float: right;
         width: 65%;
 /*        padding-right: 1em;
 */    }
  
     #secondary,
     #tertiary{
-        float: right;
-        clear: right;
+        float: left;
+        clear: left;
         width: 35%;
+        height:50vh;
     }
 }
 
@@ -21,14 +22,14 @@
 @media screen and (min-width : 1140px) {
     #primary{
         float: left;
-        margin-left: 25%;
+        margin: 0 25% 0 -75%;
+
         width: 50%;
 /*        padding: 0 1em;
 */    }
  
     #secondary{
         float: left;
-        margin: 0 0 0 -75%;
         width: 25%;
         clear: none;
     }
@@ -38,12 +39,17 @@
         width: 25%;
         clear: none;
     }
+    
+    #primary,#secondary,#tertiary{
+      height:100vh;
+    }
 }
 
 .wrap{
-    max-width: 1400px;
+    max-width: 2400px;
     margin: 0 0;
     padding: 0;
+    background:#333;
 }
  
 .wrap:after {
