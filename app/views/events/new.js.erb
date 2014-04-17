@@ -1,12 +1,6 @@
-$(".col3").append("<%= j render 'form' %>");
+$("#tertiary").append("<%= j render 'form' %>");
 
 $('.datepicker').datepicker({
   numberOfMonths: 3,
   showButtonPanel: true
 });
-
-// var reloadCalendar = function(){
-//   $('#calendar').fullCalendar({
-//     events: $.parseJSON('<%= raw @events.to_json %>');
-//   });
-// }

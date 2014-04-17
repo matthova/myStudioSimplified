@@ -13,31 +13,3 @@
  *= require fullcalendar
  *= require_tree .
  */
-body{
-  background:#000;
-}
-
-.my_studio{
-  font-family: helvetica  ;
-  font-size:30px;
-}
-
-.simplified {
-  font-family: 'Lobster Two', cursive;
-  font-size:38px;
-}
-
-.home_link a:visited{
-  color:0#fff;
-  text-decoration: none;
-}
-
-a:-webkit-any-link{
-  text-decoration:none !important;
-  color:#fff;
-}
-
-a{
-  text-decoration:none;
-  color:#fff;
-}

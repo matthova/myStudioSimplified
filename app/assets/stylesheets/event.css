@@ -1,5 +1,6 @@
 #calendar{
-  background:#ffffff;
+  background:#e8eedd;
   padding: 10px;
+  border: solid 3px #444444;
   border-radius:10px;
 }

@@ -1,1 +1,7 @@
-Hi, <%= link_to(current_user.email, user_path(current_user.id)) %>!             <%= link_to "Sign out", "/logins/#{current_user.id}", :method =>   :delete %>
+<div id="header" class="site-header cf">
+  <div class="wrap">
+    <div class="session">
+      Hi, <%= link_to(current_user.email, user_path(current_user.id)) %>!             <%= link_to "Sign out", "/logins/#{current_user.id}", :method =>   :delete %>
+    </div>
+  </div><!--.wrap-->
+</div><!--#header-->

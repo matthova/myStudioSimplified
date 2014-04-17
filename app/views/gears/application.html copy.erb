@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My Studio Simplified</title>
+  <%= stylesheet_link_tag   "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+  <link href='http://fonts.googleapis.com/css?family=Puritan' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Lobster+Two' rel='stylesheet' type='text/css'>
+  <script type="text/javascript">
+  window.events = $.parseJSON('<%= raw @events.to_json %>');
+  </script>
+  <link rel="icon" type="image/ico" href="http://s7.postimg.org/3kkn0vno7/icon_16.png"/>
+</head>
+<body>
+  <div id="header">    
+    <div class="session">
+      <%= login_partial(current_user) %>
+    </div>
+  </div>
+  
+  <div class="main cf">
+		<div class="col1 cf">
+      <a href = "/" >
+        <div class="image_wrapper">
+          <img src="https://s3-us-west-2.amazonaws.com/matthova/studio-simplified.png" class="scale_image"/>
+        </div>
+      </a>
+      <% if current_user%>
+      <%= link_to "Book Session", new_event_path, :remote => true %>
+      <br />
+      <br />
+      <%= link_to("Contacts", users_path)%>
+      <br />
+      <br />
+      <%= link_to("Manage Gear", gears_path)%>
+      <% end %>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      </div>
+      <div class="col2">
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>           </div>
+      <div class="col3">
+      </div>
+  <div id="footer"><br/><div id="footer_text">My Studio Simplified™ by <a href="http://www.matthova.com">Matt Hova</a></div></div>
+</body>
+</html>

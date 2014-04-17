@@ -1,0 +1,77 @@
+html,body{
+  background:#eeeeee;
+  font-family:helvetica;
+}
+
+#container {
+  min-height: 100%;
+  width: 100%;
+  background:#eeeeee;
+  position: relative;
+  padding: 0 5px;
+}
+
+#page {
+  padding: 0;
+  margin: 0;
+  margin-bottom: 100px;
+}
+
+
+/* =Reset
+-------------------------------------------------------------- */
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin-top: 0;
+}
+
+html,
+body,
+div{
+  margin: 0;
+  padding: 0;
+}
+
+/* =Color
+-------------------------------------------------------------- */
+ 
+#header{
+    background: #ddd;
+    height: 0px;
+    padding:1em 1em 2em 1em;
+    margin: 0;
+}
+ 
+#main{
+    background: #eeeeee;   
+}
+ 
+#secondary .widget,
+#tertiary .widget{
+}
+ 
+/* =Structure Mobile
+-------------------------------------------------------------- */
+ 
+
+
+.footer_above {
+  padding-bottom: 25px;
+}
+
+.footer {
+  background:#eeeeee;;
+  height: 25px;
+  position: absolute;
+  bottom: 0;
+  width:100%;
+}
+
+.footer p {
+  font-size: 0.83em;
+  text-align: center;
+  padding-top: 2em;
+}
