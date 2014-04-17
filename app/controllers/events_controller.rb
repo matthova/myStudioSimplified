@@ -1,6 +1,6 @@
 class EventsController < ApplicationController
   def index
-    
+    @events = Event.new.list_events(current_user)
   end
 
   def show

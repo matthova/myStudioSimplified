@@ -28,15 +28,16 @@ class Event < ActiveRecord::Base
   #
   # Sets the global variable @events to hold every event with a url, title
   # url will reference "edit event" if current user is admin else "show event"
-  def list_events
-    @events = Event.joins(:band).select(['events.id AS url', "bands.name AS title", :start])
-    @events.each do |event|
+  def list_events(current_user)
+    events = Event.joins(:band).select(['events.id AS url', "bands.name AS title", :start])
+    events.each do |event|
       if current_user
         event.url = "events/" << event.url << "/edit"
       else
         event.url = "events/" << event.url
       end
     end
+    events
   end
 
 end

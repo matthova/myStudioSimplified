@@ -7,7 +7,6 @@ $(document).ready(function(){
     showButtonPanel: true
   });
   
-  
   $('#calendar').fullCalendar({
     events: window.events
   });

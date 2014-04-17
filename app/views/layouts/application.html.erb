@@ -7,6 +7,7 @@
   <%= csrf_meta_tags %>
   <link href='http://fonts.googleapis.com/css?family=Puritan' rel='stylesheet' type='text/css'>
   <link href='http://fonts.googleapis.com/css?family=Lobster+Two' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
   <script type="text/javascript">
   window.events = $.parseJSON('<%= raw @events.to_json %>');
   </script>
@@ -15,33 +16,37 @@
 <body>
   <div id="container" class="cf">
     <div id="page" class="cf">
-      <%= login_partial(current_user) %>
+      <div id="header" class="site-header cf">
+        <div class="wrap">
+          <%= link_to "", events_path, :remote => true, :class=>"home_icon" %>
+          <%= login_partial(current_user) %>
+        </div><!--.wrap-->
+      </div><!--#header-->    
       <div id="main" class = "cf">
         <div class="wrap">
           <div id="primary" class="cf">
             <div id="content" role="main">
-              <center><a href = "/" ><div class="image_wrapper">
-                <img src="https://s3-us-west-2.amazonaws.com/matthova/studio-simplified.png" class="scale_image"/>
-              </div></a></center>
               <p><%= yield %></p>
             </div><!--#content-->
           </div><!--#primary-->
           <div id="secondary" class="cf">
             <div class="widget">
               <% if current_user%>
-              <%= link_to "Book Session", new_event_path, :remote => true %>
-              <br />
-              <br />
+              <div class="button">
+              <%= link_to "Book Session", new_event_path, :remote => true%>
+              </div>
+              <div class="button">
               <%= link_to("Contacts", users_path)%>
-              <br />
-              <br />
+              </div>
+              <div class="button">
               <%= link_to("Manage Gear", gears_path)%>
+              </div>
               <% end %>
             </div><!--.widget-->
           </div><!--#secondary-->
           <div id="tertiary" class="cf">
             <div class="widget">
-              
+              blah
             </div><!--.widget-->
           </div><!--#tertiary-->
         </div><!--.wrap-->

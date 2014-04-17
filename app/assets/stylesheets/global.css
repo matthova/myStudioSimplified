@@ -1,3 +1,15 @@
+a:-webkit-any-link{
+  text-decoration:none !important;
+  color:#000;
+}
+
+
+a{
+  text-decoration:none;
+  color:#fff;
+}
+
+
 html,body{
   background:#eeeeee;
   font-family:helvetica;
@@ -8,7 +20,7 @@ html,body{
   width: 100%;
   background:#eeeeee;
   position: relative;
-  padding: 0 5px;
+  padding: 0;
 }
 
 #page {
@@ -17,7 +29,27 @@ html,body{
   margin-bottom: 100px;
 }
 
+.home_icon{
+  background-image: url("https://s3-us-west-2.amazonaws.com/matthova/studio-simplified.png");
+  background-size:cover;
+  display: inline-block;
+  height: 4em;
+  width: 10em;
+  overflow: hidden;
+}
 
+.button{
+  width:100%;
+  border: solid 4px #000;
+  background:#dddddd;
+}
+
+.session{
+  float:right;
+  position: relative;
+  top: 1.5em;
+  right:.4em;
+}
 /* =Reset
 -------------------------------------------------------------- */
 
@@ -40,8 +72,8 @@ div{
  
 #header{
     background: #ddd;
-    height: 0px;
-    padding:1em 1em 2em 1em;
+    height: 4em;
+    padding: 0;
     margin: 0;
 }
  
@@ -51,20 +83,22 @@ div{
  
 #secondary .widget,
 #tertiary .widget{
+  font-family: 'Oswald', sans-serif;
+  font-size: 2em  ;
+  text-align:center;
+  width:100%;
 }
  
 /* =Structure Mobile
 -------------------------------------------------------------- */
- 
-
 
 .footer_above {
   padding-bottom: 25px;
 }
 
 .footer {
-  background:#eeeeee;;
-  height: 25px;
+  background:#f00;;
+  height: 2em;
   position: absolute;
   bottom: 0;
   width:100%;
